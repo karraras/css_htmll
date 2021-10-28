@@ -1,0 +1,158 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --maincolor: #402a67;
+  --backcolor: white;
+  --hacolor: rgb(255, 187, 0);
+}
+.container {
+  height: 1000px;
+  width: 1166px;
+  background-color: var(--maincolor);
+  padding: 55px;
+  position: relative;
+  z-index: 1;
+  margin: 40px auto;
+}
+/* the buy */
+.container .course {
+  display: flex;
+  flex-direction: column;
+  width: 690px;
+  color: var(--backcolor);
+}
+
+.container .course img {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 82px;
+  left: 280px;
+}
+/* the premium  */
+.container .premium {
+  background-color: var(--backcolor);
+  height: 650px;
+  width: 585px;
+  padding: 55px;
+  margin-top: 35px;
+  border-radius: 5px;
+  box-shadow: 100px -20px 27px -103px #bdbdbd;
+  z-index: 3;
+}
+.container .premium h2 {
+  padding-left: 30px;
+}
+
+.container .premium img {
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  left: 97px;
+  top: 302px;
+}
+
+.premium .number {
+  width: 479px;
+}
+.essentials .number {
+  width: 380px;
+}
+/* shadow */
+.shadow {
+  box-shadow: #ffe082 23px -36px 2px -7px;
+  width: 210px;
+}
+.shad {
+  box-shadow: #ffe082 24px -40px 2px -7px;
+  width: 291px;
+}
+.premium .number,
+.essentials .number {
+  height: 104px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.essentials button,
+.premium button {
+  background-color: var(--hacolor);
+  font-size: 15px;
+  height: 48px;
+  width: 119px;
+  margin-right: 40px;
+  border: 0;
+  font-weight: bold;
+  color: white;
+  border-radius: 3px;
+}
+
+.container .premium::after {
+  content: "$";
+  position: absolute;
+  left: 97px;
+  bottom: 265px;
+  font-size: 30px;
+}
+
+.container .premium::before {
+  content: "USD";
+  position: absolute;
+  left: 205px;
+  bottom: 241px;
+  font-weight: bold;
+}
+/* essentials */
+.container .essentials {
+  position: absolute;
+  left: 640px;
+  top: 310px;
+  height: 443px;
+  width: 434px;
+  background-color: var(--backcolor);
+  padding: 39px;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: -1;
+}
+.container .essentials h1 {
+  padding-left: 32px;
+}
+.container .essentials img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 368px;
+  bottom: 346px;
+}
+
+.premium span,
+.essentials span {
+  font-size: 58px;
+}
+
+.container .essentials::after {
+  content: "$";
+  position: absolute;
+  left: 23px;
+  bottom: 102px;
+  font-size: 30px;
+}
+
+.container .essentials::before {
+  content: "USD";
+  position: absolute;
+  left: 98px;
+  bottom: 81px;
+  font-weight: bold;
+}
